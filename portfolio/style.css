@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: ;
+}
+
+header{
+    height: 80px;
+    background-color:  powderblue;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+h1{
+    margin: 0;
+}
+.main_content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menu ul{
+    padding: 0;
+    
+}
+
+.menu li{
+    padding: 12px 24px;
+    list-style: none;
+}
+.info{
+}
+#chartContainer{
+}

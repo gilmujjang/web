@@ -2,71 +2,28 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <style>
-        .container{
-            display: flex;
-            flex-direction: column;
-        }
-        header{
-            border-bottom:1px solid gray;
-            padding-left:20px;
-        }
-        footer{
-            border-top:1px solid gray;
-            padding:20px;
-            text-align: center;
-        }
-        .content{
-            display:flex;
-        }
-        .content nav, aside{
-            border-right:1px solid gray;
-        }
-        .content aside{
-            border-left:1px solid gray;    
-        }
-        nav{
-            flex-basis: 200px;
-            flex-shrink: 0;
-        }
-        main{
-            padding:10px;
-            flex-basis: 800px;
-        }
-        ul{
-            list-style-type: none;
-        }
-        li{
-            padding-bottom:20px;
-            padding-top: 20px;
-        }
-        iframe{
-            height: 500px;
-            width: 800;
-        }
-      
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>header</h1>
-        </header>
-        <section class="content">
-            <nav>
-                <ul>
-                   <li>길무 지수</li>
-                   <li>길무 펀드 구성</li>
-                   <li>길무 펀드 역사</li>
-                </ul>
-            </nav>
-            <main>
-                <iframe src="/a.html"></iframe>
-            </main>
-        </section>
-        <footer>
-            footer
-        </footer>
-    </div>
+    <header>
+        <h1>길무지수</h1>
+    </header>
+    <main class="main_content">
+        <nav class="menu">
+            <ul>
+                <li>길무 지수</li>
+                <li>길무 펀드 구성</li>
+                <li>역대 성과</li>
+            </ul> 
+        </nav>
+        <div id="chartContainer" style="height: 400px; width: 470px;"></div>
+        <div class="info">
+            <p>차트에 마우스를 올리면 여기에 정보가 나오게 할 예정</p>
+        </div>
+    </main>
 </body>
 </html>
+
