@@ -1,6 +1,6 @@
 body{
     padding: 0;
-    margin: ;
+    margin: 150px;
 }
 
 header{
@@ -12,20 +12,22 @@ header{
 }
 h1{
     margin: 0;
+    padding: 50px 50px;
+
 }
 .main_content{
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
 }
 
 .menu{
-    list-style: none;
+    text-align: center;
+
 }
 
 .menu ul{
     padding: 0;
-    
+    margin: 0;
 }
 
 .menu li{
@@ -33,6 +35,8 @@ h1{
     list-style: none;
 }
 .info{
+    max-width: 500px;
 }
 #chartContainer{
+    min-width: 200px;
 }
