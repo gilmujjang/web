@@ -5,6 +5,10 @@ body{
 
 main{
     margin: 0;
+    max-width: 1200px;
+    position: relative;
+    left: 20%;
+
 }
 .background_img{
     background-image: url("img/bg-home.jpg") ;
@@ -69,4 +73,11 @@ footer h1{
 }
 footer div{
     padding: 12px;
+}
+
+.main_h{
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
+    margin-left: 20px;
 }
