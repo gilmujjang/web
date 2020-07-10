@@ -4,10 +4,9 @@ body{
 }
 
 main{
-    margin: 0;
-    max-width: 1200px;
-    position: relative;
-    left: 20%;
+    margin:auto;
+    max-width: 900px;
+    
 
 }
 .background_img{
