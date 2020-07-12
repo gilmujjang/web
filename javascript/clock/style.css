@@ -9,12 +9,20 @@
 
 #box{
     width: 500px;
-    margin: 300px;
     padding: 10px;
     background-color: black;
 
 }
 
 .js-title{
+    margin: 0;
+}
+
+.js-form{
+    display: none;
+}
+
+.js-greetings{
+    font-size: 36px;
     margin: 0;
 }
