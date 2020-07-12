@@ -1,0 +1,38 @@
+body{
+    background-color: #e2e2e2;
+    margin: 0;
+}
+
+#navigation_bar{
+    background-color: #4e5944;
+    display: flex; 
+    height: 140px;
+    justify-content: center;
+}
+
+#navigation_bar img{
+    padding: 48px 60px 40px 120px;
+}
+
+.nav_list{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+    color: white;
+}
+.nav_list li{
+    padding: 12px;
+    text-align: center;
+}
+
+
+
+#section_1{
+    border: 1px gray solid;
+    display: flex;
+    justify-content: center;
+}
