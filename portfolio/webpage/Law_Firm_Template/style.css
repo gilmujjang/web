@@ -32,7 +32,26 @@ body{
 
 
 #section_1{
-    border: 1px gray solid;
+    border: 1px black solid;
     display: flex;
     justify-content: center;
+}
+
+.alignCenter{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.someText{
+    background-color: whitesmoke;
+    margin: 0;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+
 }
