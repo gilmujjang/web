@@ -32,9 +32,12 @@ body{
 
 
 #section_1{
-    border: 1px black solid;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 800px;
+    border: black solid 1px;
 }
 
 .alignCenter{
@@ -49,6 +52,12 @@ body{
     background-color: whitesmoke;
     margin: 0;
     width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+#some_text{
+    max-width: 800px;
 }
 
 ul{
