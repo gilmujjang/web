@@ -1,2 +1,2 @@
-# css
-css practice
+# 연습
+프론트엔드 공부중이다
