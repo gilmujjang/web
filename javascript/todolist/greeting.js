@@ -13,13 +13,13 @@ function paintGreeting(text){
     greeting.classList.add(SHOWING_CN);
     greeting.innerText = `Hello ${text}`;
 }
- function handleSubmit(event){
-     event.preventDefault();
-     const currentValue = input.value;
-     paintGreeting(currentValue);
-     saveName(currentValue);
- }
-
+function handleSubmit(event){
+    event.preventDefault();
+    const currentValue = input.value;
+    paintGreeting(currentValue);
+    saveName(currentValue);
+}
+ 
 function askForName(){
     greeting.classList.remove(SHOWING_CN);
     form.classList.add(SHOWING_CN);

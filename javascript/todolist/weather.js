@@ -1,7 +1,6 @@
 
 const COORDS = 'coords';
-//api key는 
-const API_KEY = "###";
+const API_KEY = "c466723c64a109ca3433c6f2215cf3cc";
 const weather = document.querySelector(".js-weather");
 
 
