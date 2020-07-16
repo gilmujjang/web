@@ -1,42 +1,8 @@
-body{
-    padding: 0;
-    margin: 150px;
-}
-
-header{
-    height: 80px;
-    background-color:  powderblue;
-    text-align: center;
-    font-size: 24px;
-    margin: 0;
-}
-h1{
-    margin: 0;
-    padding: 50px 50px;
-
-}
 .main_content{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
 }
 
-.menu{
-    text-align: center;
-
-}
-
-.menu ul{
-    padding: 0;
-    margin: 0;
-}
-
-.menu li{
-    padding: 12px 24px;
-    list-style: none;
-}
-.info{
-    max-width: 500px;
-}
-#chartContainer{
-    min-width: 200px;
+section{
+    width: 400px;
 }

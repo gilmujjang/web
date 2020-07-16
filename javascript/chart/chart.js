@@ -5,7 +5,13 @@ window.onload = function () {
         title: {
             text: "Desktop Search Engine Market Share - 2016"
         },
-        data: [{
+        data: [
+            {
+                click: function(){
+                    console.log("hi");
+                }
+            },
+            {
             type: "pie",
             startAngle: 240,
             yValueFormatString: "##0.00\"%\"",
@@ -22,14 +28,12 @@ window.onload = function () {
     chart.render();
 ///////////////  interactiveChart
     var chart = new CanvasJS.Chart("interactiveChartContainer", {
-        exportEnabled: true,
         animationEnabled: true,
         title:{
             text: "State Operating Funds"
         },
         legend:{
             cursor: "pointer",
-            itemclick: explodePie
         },
         data: [{
             type: "pie",
@@ -37,7 +41,7 @@ window.onload = function () {
             toolTipContent: "{name}: <strong>{y}%</strong>",
             indexLabel: "{name} - {y}%",
             dataPoints: [
-                { y: 26, name: "School Aid", exploded: true },
+                { y: 26, name: "School Aid"},
                 { y: 20, name: "Medical Aid" },
                 { y: 5, name: "Debt/Capital" },
                 { y: 3, name: "Elected Officials" },
@@ -48,8 +52,9 @@ window.onload = function () {
         }]
     });
     chart.render();
+
     }
-    
+
     function explodePie (e) {
         if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
             e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
