@@ -5,14 +5,9 @@ window.onload = function () {
         title: {
             text: "Desktop Search Engine Market Share - 2016"
         },
-        data: [
-            {
-                click: function(){
-                    console.log("hi");
-                }
-            },
-            {
+        data: [{
             type: "pie",
+            explodeOnClick:false,
             startAngle: 240,
             yValueFormatString: "##0.00\"%\"",
             indexLabel: "{label} {y}",
@@ -36,6 +31,7 @@ window.onload = function () {
             cursor: "pointer",
         },
         data: [{
+            explodeOnClick:false,
             type: "pie",
             showInLegend: true,
             toolTipContent: "{name}: <strong>{y}%</strong>",
@@ -48,19 +44,14 @@ window.onload = function () {
                 { y: 7, name: "University" },
                 { y: 17, name: "Executive" },
                 { y: 22, name: "Other Local Assistance"}
-            ]
+            ],
+            click: function(e){
+                const test = document.querySelector(".test");
+                const text = e.dataPoint.name;
+                test.innerText = text;
+            }
         }]
     });
     chart.render();
 
-    }
-
-    function explodePie (e) {
-        if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
-            e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
-        } else {
-            e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
-        }
-        e.chart.render();
-    
-    }
+}
