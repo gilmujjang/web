@@ -11,11 +11,18 @@ window.onload = function() {
             yValueFormatString: "##0.00\"%\"",
             indexLabel: "{label} {y}",
             dataPoints: [
-                {y: 40, label: "미국주식"},
-                {y: 20, label: "해외주식"},
-                {y: 30, label: "장기미국채"},
-                {y: 10, label: "금"},
-            ]
+                {x: 1, y: 50, label: "주식"},
+                {x: 2, y: 30, label: "국채"},
+                {x: 3, y: 10, label: "금"},
+                {x: 4, y: 10, label: "비트코인"},
+            ],
+            mousemove: function(e){
+                const content = document.getElementById("content");
+                const text = e.dataPoint.label;
+                const id = e.dataPoint.x;
+                const t = document.getElementById(id);
+                content.innerText = t.textContent;
+            }
         }]
     });
     chart.render();

@@ -1,8 +1,32 @@
 .main_content{
     display: flex;
-    flex-direction: row;
 }
 
 section{
-    width: 400px;
+}
+
+.hiden{
+    display: none;
+}
+
+.menu{
+    display: flex;
+}
+
+li{
+    padding: 24px;
+    list-style: none;
+}
+
+#mainContent{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#chartContainer{
+
+}
+
+#content{
+
 }
