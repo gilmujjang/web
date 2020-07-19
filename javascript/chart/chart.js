@@ -45,13 +45,25 @@ window.onload = function () {
                 { y: 17, name: "Executive" },
                 { y: 22, name: "Other Local Assistance"}
             ],
-            click: function(e){
+            mousemove: function(e){
+                readTextFile("test.txt");
                 const test = document.querySelector(".test");
                 const text = e.dataPoint.name;
-                test.innerText = text;
+                test.innerText = readTextFile.allText;
             }
+
         }]
     });
     chart.render();
 
+
+
+    function readTextFile(file){
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function (){
+                    let allText = rawFile.responseText;
+                }
+        rawFile.send(null);
+    }
 }
