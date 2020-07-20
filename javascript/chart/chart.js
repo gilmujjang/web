@@ -46,24 +46,54 @@ window.onload = function () {
                 { y: 22, name: "Other Local Assistance"}
             ],
             mousemove: function(e){
-                readTextFile("test.txt");
                 const test = document.querySelector(".test");
                 const text = e.dataPoint.name;
-                test.innerText = readTextFile.allText;
+                test.innerText = text;
             }
 
         }]
     });
     chart.render();
 
+    
+    var chart = new CanvasJS.Chart("dynamicChart", {
+        title: {
+            text: "Temperature of Each Boiler"
+        },
+        axisY: {
+            title: "Temperature (°C)",
+            suffix: " °C"
+        },
+        data: [{
+            type: "column",	
+            yValueFormatString: "#,### °C",
+            indexLabel: "{y}",
+            dataPoints: [
+                { label: "boiler1", y: 206 },
+                { label: "boiler2", y: 163 },
+                { label: "boiler3", y: 154 },
+                { label: "boiler4", y: 176 },
+                { label: "boiler5", y: 184 },
+                { label: "boiler6", y: 122 }
+            ]
+        }]
+    });
+    
+    function updateChart() {
+        let boilerColor, deltaY, yVal;
+        let dps = chart.options.data[0].dataPoints;
+        for (let i = 0; i < dps.length; i++) {
+            deltaY = Math.round(2 + Math.random() *(-2-2));
+            yVal = deltaY + dps[i].y > 0 ? dps[i].y + deltaY : 0;
+            boilerColor = yVal > 200 ? "#FF2500" : yVal >= 170 ? "#FF6000" : yVal < 170 ? "#6B8E23 " : null;
+            dps[i] = {label: "Boiler "+(i+1) , y: yVal, color: boilerColor};
+        }
+        chart.options.data[0].dataPoints = dps; 
+        chart.render();
+    };
+    updateChart();
+    
+    setInterval(function() {updateChart()}, 1000);
+    
 
-
-    function readTextFile(file){
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", file, false);
-        rawFile.onreadystatechange = function (){
-                    let allText = rawFile.responseText;
-                }
-        rawFile.send(null);
-    }
 }
