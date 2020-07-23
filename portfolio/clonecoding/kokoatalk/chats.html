@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <div class="statusBar">
     <div class="statusBarColumn">
       <span>No Service</span>
@@ -22,76 +23,47 @@
   </div>
 
   <header class="screenHeader">
-    <h1 class="headerTitle">Friends</h1>
+    <h1 class="headerTitle">Chats</h1>
     <div class="headerIcons">
       <span class="fas fa-search fa-lg"></span>
+      <span class="far fa-comment-dots fa-lg"></span>
       <span class="fas fa-music fa-lg"></span>
       <span class="fas fa-cog fa-lg"></span>
     </div>
   </header>
 
-  <a id="friendsDisplayLink">
-    <i class="fas fa-info-circle"></i>
-    Friends' Names DisPlay
-    <i class="fas fa-chevron-right fa-xs"></i>
-  </a>
-
-  <main class="friendsScreen">
+  <main class="mainScreen">
     <div class="userComponent">
       <div class="userComponentColumn">
         <img 
           src="img/iron-man.jpg" 
-          class="userComponentAvatar userComponentAvatarXl"
+          class="userComponentAvatar userComponentAvatar"
         />
         <div class="userComponentText">
           <h4 class="userComponentTitle">Gilmu</h4>
-          <!-- <h6 class="userComponentSubtitle">this text whatever</h6> -->
+          <h6 class="userComponentSubtitle">Please check My Kokoa Account Info</h6>
         </div>
       </div>
       <div class="userComponentColumn">
-          
+        <span class="userComponentTime">21:22</span>
+        <div class="badge">1</div>
       </div>
     </div>
 
-    <div class="friendsScreenChannel">
-      <div class="friendsScreenChannelHeader">
-        <span>Channel</span>
-        <i class="fas fa-chevron-up fa-xs"></i>
-      </div>
-      <div class="userComponent">
-        <div class="userComponentColumn">
-          <img 
-            src="img/iron-man.jpg" 
-            class="userComponentAvatar userComponentAvatarSm"
-          />
-          <div class="userComponentText">
-            <h4
-              class="userComponentTitle userComponentTitleNotBold">Channel</h4>
-          </div>
-        </div>
-        <div class="userComponentColumn">
-          <div>
-            <span>2</span>
-            <i class="fas fa-chevron-right fa-xs"></i>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </main>
-
-
 
   <nav class="nav">
     <ul class="navList">
       <li class="navBtn">
         <a class="navLink" href="friends.html">
-          <i class="fas fa-user fa-2x"></i>
+          <i class="far fa-user fa-2x"></i>
         </a>
       </li>
       <li class="navBtn">
         <a class="navLink" href="chats.html">
           <span class="navNotification badge">1</span>
-          <i class="far fa-comment fa-2x"></i>
+          <i class="fas fa-comment fa-2x"></i>
         </a>
       </li>
       <li class="navBtn">
