@@ -1,0 +1,38 @@
+#logInForm{
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+}
+
+#logInForm input{
+  border: none;
+  padding: 15px 0;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+#logInForm input:not([type="submit"]){
+  border-bottom: 1px solid var(--gray);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#logInForm input::placeholder{
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#logInForm input:focus{
+  border-color: var(--yellow);
+}
+
+#logInForm input[type="submit"]{
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#logInForm a{
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}

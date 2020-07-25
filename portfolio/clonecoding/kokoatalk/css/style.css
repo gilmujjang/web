@@ -1,0 +1,53 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import "variables.css";
+
+@import "components/statusBar.css";
+@import "components/navBar.css";
+@import "components/userComponent.css";
+@import "components/screenHeader.css";
+@import "components/badge.css";
+@import "components/iconRow.css";
+@import "components/altScreenHeader.css";
+
+
+
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+
+
+
+body{
+    font-family: "Open Sans", sans-serif;
+    height: 200vh;
+    color: #2e363e;
+}
+
+.welcomeHeader{
+    margin-top: 90px;
+    text-align: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+.welcomeheaderTitle{
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+.welcomeheaderText{
+    width: 60%;
+    opacity: 0.7;
+}
+
+.mainScreen{
+    padding: 0 var(--horizontalSpace);
+  }

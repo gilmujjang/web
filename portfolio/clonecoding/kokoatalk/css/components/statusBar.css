@@ -1,0 +1,32 @@
+.statusBar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px 3px;
+  background-color: white;
+}
+
+.statusBarColumn{
+  width: 33%;
+}
+
+.statusBarColumn:first-child span{
+  margin-right: 5px;
+}
+
+.statusBarColumn:nth-child(2){
+  display: flex;
+  justify-content: center;
+}
+
+.statusBarColumn:last-child{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fa-battery-three-quarters{
+  margin: 0 5px;
+}

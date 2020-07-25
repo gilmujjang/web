@@ -1,2 +1,10 @@
-css
-css
+/portfolio/clonecoding/react-blog/node-modules
+/portfolio/clonecoding/react-blog/build
+
+/portfolio/clonecoding/react-blog/.DS_Store
+
+npm-debug.log*
+yarn-debug.kog*
+yarn-error.log*
+
+.vscode

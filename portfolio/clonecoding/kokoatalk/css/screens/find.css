@@ -1,0 +1,102 @@
+.recommendedFriends{
+  border-top: var(--mainBorder);
+  border-bottom: var(--mainBorder);
+  padding: 24px 0;
+  margin: 24px 0;
+}
+
+.recommendedFriendsTitle{
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.recommendedFriends span{
+  margin: 90px 0;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  color: var(--gray);
+}
+
+.openChatHeader{
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.openChatHeader span{
+  opacity: 0.6;
+}
+
+.openPost{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.openPostTitle{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.openPostHashtags{
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.openPostMembers{
+  display: flex;
+  align-items: center;
+}
+
+.openPostMembers img{
+  width: 20px;
+  height: 20px;
+  border-radius: 40%;
+  margin: 5px 5px;
+}
+
+.openPostMemberCount{
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.openPostMembers .divider{
+  width: 1px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: var(--gray);
+}
+
+.openPostmemberStatus{
+  color: #ffb0e0;
+}
+
+.openPostPhoto{
+  position: relative;
+}
+
+.openPostPhoto img{
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.openPostHeratCount{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 12px;
+}
+
+.openPostHeratCount span{
+  margin-left: 5px;
+}

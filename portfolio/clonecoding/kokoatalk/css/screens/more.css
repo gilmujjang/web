@@ -1,0 +1,40 @@
+.moreScreen .iconRow{
+  margin-top: 35px;
+}
+
+.moreSuggestions{
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: var(--mainBorder);
+}
+
+.moreSuggestionsTitle{
+  margin-bottom: 30px;
+}
+
+.moreSuggestionsIcons{
+  display: flex;
+
+}
+
+.moreSuggestionsIcon{
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moreSuggestionsIconImage{
+  width: 60px;
+  height: 60px;
+  background-color: var(--yellow);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.moreSuggestionsIconImage i{
+  font-size: 28px;
+}
