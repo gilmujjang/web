@@ -3,6 +3,7 @@ const app = express();
 const port = 5000;
 const bodyParser = require('body-parser');
 const { User } = require("./models/User");
+const config = require('./config/key')
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -11,13 +12,13 @@ app.use(bodyParser.json());
 const mongoose = require('mongoose');
 const { json } = require('body-parser');
 
-mongoose.connect('mongodb+srv://gilmu:root@react-blog.kd6dr.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDb Connected...'))
   .catch(err => console.log(err))
 
 
-app.get('/', (req, res) => res.send('hellow node.js'))
+app.get('/', (req, res) => res.send('test nodemon'))
 
 app.post('/register', (req, res) => {
    const user = new User(req.body)
