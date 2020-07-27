@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = 5000;
 const bodyParser = require('body-parser');
 const { User } = require("./models/User");
 const { auth } = require("./middleware/auth.js")
@@ -8,6 +7,8 @@ const config = require('./config/key')
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const { json } = require('body-parser');
+const port = 5000;
+
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -28,7 +29,6 @@ app.get('/api/hello', (req, res) => {
 
 
 
-
 app.post('/api/users/register', (req, res) => {
    const user = new User(req.body)
 
@@ -36,7 +36,7 @@ app.post('/api/users/register', (req, res) => {
      if(err) return res.json({success: false, err})
      return res.status(200).json({ success: true })
    })
-})
+})  
 
 
 // login router
@@ -94,5 +94,6 @@ app.get('/api/users/logout', auth, (req, res) => {
     }
   )
 })
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
