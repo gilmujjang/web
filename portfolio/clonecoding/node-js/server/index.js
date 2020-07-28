@@ -45,7 +45,6 @@ app.post('/api/users/login', (req, res) => {
 
   //요청된 이메일이 DB에 있는지 찾음
   User.findOne({ email: req.body.email }, (err,user) => {
-    console.log('user', !user)
     if (!user) {
       return res.json({ loginSuccess: false, message: "가입되지 않은 이메일입니다" })
     }
@@ -78,9 +77,11 @@ app.get('/api/users/auth', auth, (req, res) => {
     isAdmin: req.user.role === 0 ? false : true,
     isAuth: true,
     email: req.user.email,
-    name: req.user.name
+    name: req.user.name,
+    lastname: req.user.lastname,
+    role: req.user.role,
+    image: req.user.image
   })
-
 })
 
 
@@ -90,9 +91,10 @@ app.get('/api/users/logout', auth, (req, res) => {
     {token: ""},
     (err, user) => {
       if(err) return res.json({ success: false, err});
-      return res.status(200).send({success: true})
-    }
-  )
+      return res.status(200).send({
+        success: true
+      })
+    })
 })
 
 
