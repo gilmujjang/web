@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaCode } from "react-icons/fa";
-import { API_URL, API_KEY, IMAGE_BASW_URL } from '../../Config';
+import { API_URL, API_KEY, IMAGE_BASE_URL } from '../../Config';
 import MainImage from './Sections/MainImage';
 import GridCards from '../commons/GridCards'
 import { Row } from 'antd'
@@ -9,19 +9,33 @@ function LandingPage() {
 
   const [Movies, setMovies] = useState([])
   const [MainMovieImage, setMainMovieImage] = useState(null)
+  const [CurrentPage, setCurrentPage] = useState(0);
 
 
-  useEffect(() => {
-    const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+
+  const fetchMovies = (endpoint) => {
     fetch(endpoint)
       .then(response => response.json())
         .then(response => {
 
-          setMovies([...response.results])
+          setMovies([...Movies, ...response.results])
           setMainMovieImage(response.results[0])
+          setCurrentPage(response.page)
         })
+  }
+
+  useEffect(() => {
+    const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+    fetchMovies(endpoint)
+      
   }, [])
 
+
+  const loadMoreItems = () => {
+    const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${CurrentPage + 1}`;
+    fetchMovies(endpoint)
+
+  }
 
 
 
@@ -31,24 +45,25 @@ function LandingPage() {
 
             {MainMovieImage &&
               <MainImage
-                image={`${IMAGE_BASW_URL}w1280${MainMovieImage.backdrop_path}`}
+                image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
                 title={MainMovieImage.original_title}
                 text={MainMovieImage.overview}
               />
             }
 
-            <div style={{width: '85%', margin: '1rem auto'}}>
+            <div style={{width: '70%', margin: '1rem auto'}}>
               <h2>Movies by latest</h2>
               <hr/>
 
               {/* Movie Grid Cards */}
-              <Row gutter={[16, 16]}>
+              <Row gutter={[24, 24]}>
 
                 { Movies && Movies.map((movie, index) => (
                   <React.Fragment key={index}>
                     <GridCards
+                      landingPage
                       image = {movie.poster_path ?
-                        `${IMAGE_BASW_URL}w500${movie.poster_path}` : null}
+                        `${IMAGE_BASE_URL}w500${movie.poster_path}` : null}
                       movieId = {movie.id}
                       movieName = {movie.original_title}
                     />
@@ -64,7 +79,7 @@ function LandingPage() {
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'center'}}>
-              <button> Load More </button>
+              <button onClick={loadMoreItems}> Load More </button>
             </div>
           </div>         
     )
