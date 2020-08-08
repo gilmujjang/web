@@ -1,5 +1,5 @@
 # CSS
-주로 유뷰버 Online Tutorials (주소 https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog ) 의 영상을 따라했다.
+주로 유튜버 Online Tutorials (주소 https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog ) 의 영상을 따라했다.
 
 # javascript
 vanilla javascript 를 사용한 연습들은 이 폴더에 넣는다.
