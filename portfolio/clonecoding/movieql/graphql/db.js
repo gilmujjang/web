@@ -1,4 +1,4 @@
-const movies = [
+export const movies = [
   {
     id:0,
     name: "Star-wars",
@@ -25,8 +25,6 @@ const movies = [
     score: 2
   }
 ];
-
-export const getMovies = () => movies;
 
 export const getById = id => {
   const filteredMovies = movies.filter(movie => movie.id === String(id));
