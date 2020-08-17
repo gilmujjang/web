@@ -1,11 +1,13 @@
-type Movie{
+type Movie {
   id: Int!
-  name: String!
-  score: Int!
+  title: String!
+  rating: Float!
+  summary: String!
+  language: String!
+  medium_cover_image: String!
 }
 
 
-type Query{
+type Query {
   movies: [Movie]!
-  movie(id: Int!): Movie
 }
