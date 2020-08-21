@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Ring of Fire</title>
+</head>
+<body>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <svg>
+    <filter id="wavy">
+      <feTurbulence x="0" y="0" baseFrequency="0.01" numOctaves="5" seed="2">
+        <animate attributeName="baseFrequency" dur="30s" values="0.02;0.009;0.02" repeatCount="indefinite"></animate>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="20">
+    </filter>
+  </svg>
+</body>
+</html>
