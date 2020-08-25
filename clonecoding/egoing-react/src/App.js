@@ -11,29 +11,26 @@ class App extends Component {
     super(props);
     this.state = {
       contents: [
+        {id:100, name:"test"},
       ]
     }
   }
   render(){
-    let url = 'https://api.github.com/repos/gilmujjang/web/contents/small';
-    let list = [];
-    fetch(url, {method:'GET'})
-    .then(res => res.json())
-    .then((out) => {
-      for(let i=0; i<out.length; i++){
-        list.push(out[i].name)
-      }
-      return list
-      // list.forEach(name => this.state.contents.push(name))
-      // this.setState({contents:this.state.contents})
 
-    })
-    .then(list =>
-       list.forEach(name =>
-         this.state.contents.push(name)),
-         this.setState({contents:this.state.contents})
-       )
-    .catch(err => { throw err });
+    let list = [];
+    let url = 'https://api.github.com/repos/gilmujjang/web/contents/small';
+    let request = new XMLHttpRequest();
+    request.open('GET', url);
+    request.onreadystatechange = function (evt) {
+      if (request.readyState !== 4) {
+        return;
+      }
+      console.log(request.response)
+    };
+    request.send();
+    request.responseType = 'json';
+    console.log(request.response)
+
     return (
       <div className="App">
         <Header></Header>
