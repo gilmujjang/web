@@ -17,16 +17,22 @@ class App extends Component {
   render(){
     let url = 'https://api.github.com/repos/gilmujjang/web/contents/small';
     let list = [];
-    fetch(url)
+    fetch(url, {method:'GET'})
     .then(res => res.json())
     .then((out) => {
       for(let i=0; i<out.length; i++){
-        this.state.contents.push(out[i].name)
+        list.push(out[i].name)
       }
-      this.setState({
-        contents:this.state.contents
-      })
+      return list
+      // list.forEach(name => this.state.contents.push(name))
+      // this.setState({contents:this.state.contents})
+
     })
+    .then(list =>
+       list.forEach(name =>
+         this.state.contents.push(name)),
+         this.setState({contents:this.state.contents})
+       )
     .catch(err => { throw err });
     return (
       <div className="App">
