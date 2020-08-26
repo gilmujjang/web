@@ -16,21 +16,6 @@ class App extends Component {
     }
   }
   render(){
-
-    let list = [];
-    let url = 'https://api.github.com/repos/gilmujjang/web/contents/small';
-    let request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.onreadystatechange = function (evt) {
-      if (request.readyState !== 4) {
-        return;
-      }
-      console.log(request.response)
-    };
-    request.send();
-    request.responseType = 'json';
-    console.log(request.response)
-
     return (
       <div className="App">
         <Header></Header>
