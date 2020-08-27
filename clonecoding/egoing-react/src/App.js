@@ -11,7 +11,6 @@ class App extends Component {
     super(props);
     this.state = {
       contents: [
-        {id:100, name:"test"},
       ]
     }
   }
@@ -20,7 +19,7 @@ class App extends Component {
       <div className="App">
         <Header></Header>
         <Sidebar></Sidebar>
-        <Contents data={this.state.contents}></Contents>
+        <Contents></Contents>
       </div>
     );
   }

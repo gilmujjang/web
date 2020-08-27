@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 
 function Gettext() {
   const [text, setText] = useState([])
+  let jsonfile = 'https://raw.githubusercontent.com/gilmujjang/web/master/small/ring_of_fire/index.html'
+
 
   useEffect(() => {
-    let jsonfile = 'https://raw.githubusercontent.com/gilmujjang/web/master/small/Analog-clock/index.html'
     fetch(jsonfile)
       .then(response => response.text())
       .then(response => {
@@ -16,11 +17,13 @@ function Gettext() {
   function createMarkup(text){
     return {__html:text};
   }
+
+  
   
 
   return (
     <div>
-      <div dangerouslySetInnerHTML={createMarkup(text)}></div>
+      <iframe id="if"></iframe>
     </div>
   )
 }
