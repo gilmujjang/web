@@ -5,9 +5,7 @@ class Header extends Component{
   render(){
     return(
       <div className="header">
-        <div>
-          <h2>길무펀드</h2>
-        </div>
+        <h2>포트폴리오</h2>
       </div>
     )
   }
