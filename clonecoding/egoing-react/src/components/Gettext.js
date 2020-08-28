@@ -14,16 +14,14 @@ function Gettext() {
     })
   }, [])
 
-  function createMarkup(text){
-    return {__html:text};
+  function createMarkup(t){
+    return {__html:t};
   }
 
-  
-  
 
   return (
     <div>
-      <iframe id="if"></iframe>
+      <div dangerouslySetInnerHTML={createMarkup(text)}></div>
     </div>
   )
 }

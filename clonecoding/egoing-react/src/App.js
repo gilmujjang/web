@@ -18,8 +18,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
-        <Sidebar></Sidebar>
-        <Contents></Contents>
+        <div className="content">
+          <Sidebar></Sidebar>
+          <Contents></Contents>
+        </div>
       </div>
     );
   }
