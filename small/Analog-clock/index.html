@@ -4,13 +4,8 @@
   <meta charset="UTF-8">
   <title>Analog Clock</title>
   <style>
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
 
-    body{
+    .body{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -104,17 +99,20 @@
   </style>
 </head>
 <body>
-  <div class="clock">
-    <div class="hour">
-      <div class="hr" id="hr"></div>
-    </div>
-    <div class="min">
-      <div class="mn" id="mn"></div>
-    </div>
-    <div class="sec">
-      <div class="sc" id="sc"></div>
+  <div class="body">
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
     </div>
   </div>
+  
   <script>
     const deg = 6;
     const hr = document.querySelector("#hr")
