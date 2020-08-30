@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import InnerHTML from 'dangerously-set-html-content'
 
 function Gettext() {
 
