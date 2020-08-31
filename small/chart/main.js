@@ -1,4 +1,4 @@
-	window.onload = function () {
+window.onload = function () {
 ////////////basicchart
 	var chart = new CanvasJS.Chart("basicChartContainer", {
 		animationEnabled: true,
@@ -50,12 +50,10 @@
 				const text = e.dataPoint.name;
 				test.innerText = text;
 			}
-
 		}]
 	});
 	chart.render();
 
-	
 	var chart = new CanvasJS.Chart("dynamicChart", {
 		title: {
 			text: "Temperature of Each Boiler"
@@ -91,6 +89,7 @@
 		chart.options.data[0].dataPoints = dps; 
 		chart.render();
 	};
+	
 	updateChart();
 	
 	setInterval(function() {updateChart()}, 1000);
