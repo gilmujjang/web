@@ -11,7 +11,7 @@ function Gettext() {
 
   let jsonfile2 = 'https://api.github.com/repos/gilmujjang/web/contents/small'
   let jsonfile1 = 'https://raw.githubusercontent.com/gilmujjang/web/master/small/'+clicked+'/index.html'
-  let js = 'https://raw.githubusercontent.com/gilmujjang/web/master/small/'+clicked+'/main.js'
+  let js = 'https://cdn.jsdelivr.net/gh/gilmujjang/web/small/Analog-clock/main.js'+clicked+'/main.js'
   useEffect(() => {
     fetch(jsonfile2)
       .then(response => response.json())
@@ -40,9 +40,6 @@ function Gettext() {
 
   return (
     <div className="contents">
-      <Helmet>
-        <script src={js} async defer></script>
-      </Helmet>
       <div className="gitlists">
         {lists.map(list => <a className="gitlist" onClick={function(e) {
           e.preventDefault();
@@ -52,6 +49,8 @@ function Gettext() {
       <div className="githtml">
         <div dangerouslySetInnerHTML={createMarkup(text)}></div>
       </div>
+      <script src="https://cdn.jsdelivr.net/gh/gilmujjang/web/small/Analog-clock/main.js"></script>
+
     </div>
   )
 }
