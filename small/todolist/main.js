@@ -105,7 +105,7 @@
         }
 
         //배경화면 구현
-        const body = document.querySelector("body");
+        const body = document.querySelector("#body");
         const IMG_NUMBER = 3;
         function paintImage(imgNumber){
             const img = new Image();

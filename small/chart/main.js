@@ -90,7 +90,7 @@ window.onload = function () {
 		chart.render();
 	};
 	
-	updateChart();
-	
-	setInterval(function() {updateChart()}, 1000);
-	}
+	setInterval(() => {
+		updateChart()
+	}, 1000)
+}

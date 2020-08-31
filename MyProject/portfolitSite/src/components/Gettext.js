@@ -42,7 +42,7 @@ function Gettext() {
   return (
     <div className="contents">
       <Helmet>
-        <script src={js} async defer></script>
+        <script src={js} defer></script>
      </Helmet>
       <div className="gitlists">
         {lists.map(list => <a className="gitlist" onClick={function(e) {
