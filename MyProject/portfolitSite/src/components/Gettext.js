@@ -30,17 +30,19 @@ function Gettext() {
       .then(response => {
         setText(response)
       })
+
   fetch(js)
-      .then(response => response.text())
-      .then(response => {
-        setJsfile(response)
-      })
+    .then(response => response.text())
+    .then(response => {
+      setJsfile(response)
+    })
+
 
 
   return (
     <div className="contents">
       <Helmet>
-        <script src="https://cdn.jsdelivr.net/gh/gilmujjang/web/small/Analog-clock/main.js"></script>
+        <script src={js} async defer></script>
      </Helmet>
       <div className="gitlists">
         {lists.map(list => <a className="gitlist" onClick={function(e) {
@@ -51,9 +53,7 @@ function Gettext() {
       <div className="githtml">
         <div dangerouslySetInnerHTML={createMarkup(text)}></div>
       </div>
-      {/* <script type="text/javascript">{jsfile}</script> */}
     </div>
   )
 }
 export default Gettext
-{/* <script src="https://cdn.jsdelivr.net/gh/gilmujjang/web/small/Analog-clock/main.js"></script> */}
