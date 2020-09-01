@@ -105,13 +105,13 @@
         }
 
         //배경화면 구현
-        const body = document.querySelector("#body");
+        const main = document.querySelector(".body");
         const IMG_NUMBER = 3;
         function paintImage(imgNumber){
             const img = new Image();
             img.src = `https://raw.githubusercontent.com/gilmujjang/web/master/small/todolist/${imgNumber +1}.jpg`;
             img.classList.add("bgImage")
-            body.appendChild(img)
+            main.appendChild(img)
         }
         function getRandom(){
             const number = Math.floor(Math.random()*IMG_NUMBER);
