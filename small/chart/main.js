@@ -46,8 +46,8 @@ window.onload = function () {
 				{ y: 22, name: "Other Local Assistance"}
 			],
 			mousemove: function(e){
-				const test = document.querySelector(".test");
-				const text = e.dataPoint.name;
+				let test = document.querySelector(".test");
+				let text = e.dataPoint.name;
 				test.innerText = text;
 			}
 		}]

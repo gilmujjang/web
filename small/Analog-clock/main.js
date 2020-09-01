@@ -1,7 +1,7 @@
-const deg = 6;
-const hr = document.querySelector("#hr")
-const mn = document.querySelector("#mn")
-const sc = document.querySelector("#sc")
+let deg = 6;
+let hr = document.querySelector("#hr")
+let mn = document.querySelector("#mn")
+let sc = document.querySelector("#sc")
 
 window.setInterval(() => {
   let day = new Date();
