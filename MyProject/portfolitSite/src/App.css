@@ -1,3 +1,7 @@
+body{
+  padding: 0;
+  margin: 0;
+}
 
 .contents{
   display: flex;
@@ -25,8 +29,10 @@
 }
 
 .header{
-  padding: 36px;
+  padding: 24px;
   display: flex;
   text-align:center;
   align-items: center;
+  justify-content: space-between;
+  background: #ccc;
 }
