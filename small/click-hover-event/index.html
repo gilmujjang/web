@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click And Hold</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+    .body{
+      margin: 0;
+      padding: 100px;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      min-height: 100vh;
+      background: #fff;
+    }
+    .body h2{
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .body p{
+      font-size: 1.2em;
+    }
+    #cursor{
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      transform: translate(-50%,-50%);
+      mix-blend-mode: difference;
+      transition: width 2s, height 2s;
+    }
+    #cursor:active{
+      width: 3200px;
+      height: 3200px;
+      transition: width 2s, height 2s;
+    }
+    #cursor::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      background: #000;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    #cursor::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: #000;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    #cursor:active::before{
+  
+    }
+
+
+  </style>
+</head>
+<body>
+  <section class="body">
+    <h2>Click and Hold</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries.<br><br>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries.
+    </p>
+  </section>
+  <div id="cursor"></div>
+  <script src="main.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/gilmujjang/web/small/click-hover-event/main.js"></script> -->
+</body>
+</html>
