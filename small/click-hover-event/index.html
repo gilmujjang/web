@@ -23,8 +23,8 @@
     }
     #cursor{
       position: fixed;
-      width: 20px;
-      height: 20px;
+      width: 10px;
+      height: 10px;
       background: #fff;
       border-radius: 50%;
       transform: translate(-50%,-50%);
@@ -32,8 +32,8 @@
       transition: width 2s, height 2s;
     }
     #cursor:active{
-      width: 3200px;
-      height: 3200px;
+      width: 4000px;
+      height: 4000px;
       transition: width 2s, height 2s;
     }
     #cursor::before{
@@ -67,7 +67,7 @@
 
   </style>
 </head>
-<body>
+<body class="body" onmousemove="cursorFuntion(event)">
   <section class="body">
     <h2>Click and Hold</h2>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -97,7 +97,6 @@
     </p>
   </section>
   <div id="cursor"></div>
-  <script src="main.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/gh/gilmujjang/web/small/click-hover-event/main.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/gilmujjang/web/small/click-hover-event/main.js"></script>
 </body>
 </html>
